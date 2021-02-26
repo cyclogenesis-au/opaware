@@ -1,4 +1,14 @@
 # List required packages in this file, one per line.
+scipy
+matplotlib
+dask
+distributed
+pandas
+pint
+requests
+pyproj>=2.0.0
+cartopy
+skyfield
 act-atmos
 numpy
 pandas
