@@ -1,4 +1,3 @@
-import act
 import json
 import numpy as np
 import pandas as pd
@@ -52,7 +51,7 @@ def ingest_915_jsons(my_data):
 def ingest_ambient(textlines):
     """
     Ingest Ambient text stream collected from rtl_433 to an
-    ACT xarray object
+    ACT compliant xarray object
 
     Parameters
     ----------
