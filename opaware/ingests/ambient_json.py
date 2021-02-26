@@ -34,7 +34,7 @@ def ingest_915_jsons(my_data):
 
     tu = 'C'
     tsn = 'Temperature'
-    #dpsn = 'Dewpoint'
+    # dpsn = 'Dewpoint'
     xds = xr.Dataset(numpy_data,
                      coords={'time': dates})
 
@@ -112,7 +112,7 @@ def ingest_ambient(textlines):
 
     mxr['outside_dewpoint'] = td
     tu = 'F'
-    #tsn = 'Temperature'
+    # tsn = 'Temperature'
     dpsn = 'Dewpoint'
     mxr['outside_dewpoint'].attrs = {'standard_name': dpsn, 'units': tu, 'long_name': 'outside dewpoint'}
 
