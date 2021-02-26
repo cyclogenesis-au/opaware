@@ -1,0 +1,19 @@
+# Basic environment for opaware.
+name: opaware
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - numpy
+  - scipy
+  - xarray
+  - matplotlib
+  - dask
+  - distributed
+  - pandas
+  - pint
+  - requests
+  - pyproj>=2.0.0
+  - cartopy
+  - skyfield
+  - act-atmos
