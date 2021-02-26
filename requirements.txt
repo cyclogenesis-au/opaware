@@ -6,7 +6,6 @@ distributed
 pandas
 pint
 requests
-pyproj
 cartopy
 skyfield
 act-atmos
