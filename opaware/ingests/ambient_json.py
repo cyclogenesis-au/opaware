@@ -1,4 +1,3 @@
-import act
 import json
 import numpy as np
 import pandas as pd
@@ -35,7 +34,7 @@ def ingest_915_jsons(my_data):
 
     tu = 'C'
     tsn = 'Temperature'
-    dpsn = 'Dewpoint'
+    # dpsn = 'Dewpoint'
     xds = xr.Dataset(numpy_data,
                      coords={'time': dates})
 
@@ -52,7 +51,7 @@ def ingest_915_jsons(my_data):
 def ingest_ambient(textlines):
     """
     Ingest Ambient text stream collected from rtl_433 to an
-    ACT xarray object
+    ACT compliant xarray object
 
     Parameters
     ----------
@@ -106,14 +105,14 @@ def ingest_ambient(textlines):
 
     mxr = ingest_915_jsons(really_good)
     mxr['solar_irrad'] = mxr['solar_lux'] * 0.0079
-    td = 243.04 * (np.log(mxr['humidity'] / 100.) \
+    td = 243.04 * (np.log(mxr['humidity'] / 100.)
                    + ((17.625 * mxr['outside_temperature']) / (243.04 + mxr['outside_temperature']))) / (
-                     17.625 - np.log(mxr['humidity'] / 100) \
+                     17.625 - np.log(mxr['humidity'] / 100)
                      - ((17.625 * mxr['outside_temperature']) / (243.04 + mxr['outside_temperature'])))
 
     mxr['outside_dewpoint'] = td
     tu = 'F'
-    tsn = 'Temperature'
+    # tsn = 'Temperature'
     dpsn = 'Dewpoint'
     mxr['outside_dewpoint'].attrs = {'standard_name': dpsn, 'units': tu, 'long_name': 'outside dewpoint'}
 

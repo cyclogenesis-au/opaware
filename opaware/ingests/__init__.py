@@ -1,3 +1,5 @@
+from .ambient_json import ingest_ambient
+
 """
 ===============
 opaware.ingests (opaware.ingests)
@@ -8,5 +10,3 @@ This module contains procedures for reading and writing .
     :toctree: generated/
     ingest_ambient
 """
-
-from .ambient_json import ingest_ambient
