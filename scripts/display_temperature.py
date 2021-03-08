@@ -25,7 +25,7 @@ if __name__ == "__main__":
     options.hardware_mapping = "adafruit-hat"
     mymat = RGBMatrix(options = options)
 
-    offscreen_canvas = mymat.matrix.CreateFrameCanvas()
+    offscreen_canvas = mymat.CreateFrameCanvas()
     font = graphics.Font()
     font.LoadFont("/home/ubuntu/7x13.bdf")
     textColor = graphics.Color(255, 255, 0)
@@ -40,5 +40,5 @@ if __name__ == "__main__":
             pos = offscreen_canvas.width
 
         time.sleep(0.05)
-        offscreen_canvas = self.matrix.SwapOnVSync(offscreen_canvas)
+        offscreen_canvas = mymat.SwapOnVSync(offscreen_canvas)
 
