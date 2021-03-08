@@ -9,7 +9,7 @@ import os
 hostname = 'flashpi'
 iport = 22
 username = 'pi'
-password = 'R!de45ice'
+password = ''
 
 def do_it():
     s = paramiko.SSHClient()
